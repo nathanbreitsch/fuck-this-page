@@ -1,0 +1,22 @@
+// https://developer.chrome.com/extensions/manifest
+{
+  "manifest_version": 2,
+
+  "name": "ChromeExtensionTest",
+  "version": "0.0.3",
+
+
+  "browser_action": {
+    "default_icon": "middle_finger.png",
+    "default_popup": "browser_action.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*","https://*/*"],
+    "css":["style.css"],
+    "js": [
+      "jquery.js",
+      "bootstrap.js",
+      "helloWorld.js"
+    ]
+  }]
+}
